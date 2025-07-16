@@ -1,17 +1,22 @@
-function Solve(a) {
-    let sum = a;
+function sum(...args) {
+  let total = args.reduce((a, b) => a + b, 0);
 
-    function inner(b) {
-        sum += b;
-        return inner;
-    }
-
-    inner.valueOf = function () {
-        return sum;
-    };
-    
+  function inner(...nextArgs) {
+    total += nextArgs.reduce((a, b) => a + b, 0);
     return inner;
+  }
+
+  inner.valueOf = function () {
+    return total;
+  }
+  
+  Object.defineProperty(inner,"value",{
+      get(){
+          return total
+      }
+  })
+  return inner;
 }
 
-const result = Solve(1)(2)(3)(4);
-console.log(""+result);
+console.log(sum(4, 6, 8, 10).value);     
+console.log(sum(4)(6)(8)(10).value); 
