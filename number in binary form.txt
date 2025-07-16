@@ -1,0 +1,18 @@
+
+function Solve(num){
+    let count = 0;
+    const ans=[]
+
+  while (num > 0) {
+    if (num % 2 === 1) {
+      count++;
+      ans.push(num%2)
+    }
+    num = Math.floor(num / 2);
+  }
+
+  return {count,ans};
+}
+
+const result=Solve(13)
+console.log(result)

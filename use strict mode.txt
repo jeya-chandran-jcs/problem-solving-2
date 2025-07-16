@@ -1,0 +1,13 @@
+use strict mode
+
+1-it helps us debug and find errors
+
+2- it wont allow duplicate variables or arguments,
+
+3- if there is a undefined variable it will throw error,
+
+4-if there is any values that has read only properties it wil throw error,
+
+5 basically it helps developers to track errors and avoid any bugs,
+
+6 we can use it by use "use strict" at the top of our code

@@ -1,0 +1,14 @@
+
+
+function Solve(n,cache){
+if(n ==1 || n==0) return n
+    
+    if(cache[n]) return cache[n]
+    
+    cache[n]=Solve(n-1,cache)+Solve(n-2,cache)
+ 
+ return cache[n]
+}
+
+const result=Solve(10,{})
+console.log(result)

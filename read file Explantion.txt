@@ -1,0 +1,11 @@
+read file Explantion
+
+1- we need to define a type as file in the input filed and we have to to provide id or classname to read it
+
+2- using document .getelement byid -file and to attach a add event listener
+
+3- target the file and create a new FileReader fuction 
+
+4- while the file load we add afunction to console it or do any conditions and
+
+5-we have to tell the dom that its readastext by giving the reader.readastext and pass the file as arguments 

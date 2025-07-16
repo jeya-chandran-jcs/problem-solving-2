@@ -1,0 +1,27 @@
+
+
+function Solve(arr){
+  for(let i=0;i<arr.length-1;i++)
+    {
+        if(arr[i]>arr[i+1])
+        {
+            [arr[i],arr[i+1]]=[arr[i+1],arr[i]]
+            i=-1
+        }
+        
+    }
+    
+    for(let i=0;i<arr.length-1;i++)
+    {
+        let first=arr[i]
+        let second=arr[i+1]
+        if((first+second)%2==0)
+        {
+            return first+1
+           
+        }
+    }
+}
+
+const result=Solve([1, 2, 4, 6, 3, 7, 8])
+console.log(result)

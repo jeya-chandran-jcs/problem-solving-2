@@ -1,0 +1,14 @@
+
+
+function Solve(arr){
+    const ans=[]
+    for(let i=0;i<arr.length;i++)
+    {
+        if(arr[i]) ans[ans.length]=arr[i]
+        
+    }
+    return ans
+}
+
+const result=Solve([2,0,null,4,undefined,"",NaN,false])
+console.log(result)

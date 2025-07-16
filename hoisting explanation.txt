@@ -1,0 +1,17 @@
+
+
+function Solve(str){
+
+    console.log("hoisting undefined value",hoisting)
+    var hoisting="this is my hossiing"
+    console.log("defiened value",hoisting)
+  
+  explainsHpisting()
+  
+  function explainsHpisting(){
+      console.log("hi im from inside a nested func",hoisting)
+  }
+ 
+}
+
+const result=Solve("the_stealth-warrior")

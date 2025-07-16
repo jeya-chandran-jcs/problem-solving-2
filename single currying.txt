@@ -1,0 +1,14 @@
+
+function Solve(...args){
+
+if(arguments.length>2)
+    {
+  const ans=args.reduce((arr,num)=>arr+num,0)
+  return ans
+    }
+
+
+}
+
+const result=Solve(1,2,3,4,5)
+console.log(result)

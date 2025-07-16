@@ -1,0 +1,17 @@
+function Solve(a) {
+    let sum = a;
+
+    function inner(b) {
+        sum += b;
+        return inner;
+    }
+
+    inner.valueOf = function () {
+        return sum;
+    };
+    
+    return inner;
+}
+
+const result = Solve(1)(2)(3)(4);
+console.log(""+result);
